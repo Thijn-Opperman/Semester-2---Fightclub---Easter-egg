@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body{
+    background-color: black;
+    height: 3000px;
+    max-width: 1600px;
+    
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding: 0 5%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.back-video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    
+}
+ 
+.container{
+    background-color: rgb(53, 51, 51);
+    margin-top: -300px;
+    display: flex;
+    margin-left: 200px;
+    clip-path: polygon(5.4% 0, 100% 0, 100% 100%, 0 100%); 
+    opacity: 0.9;
+    
+}
+
+h1{
+    color: white;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+}
+
+p{
+    color: white;
+    font-size: 0.9rem;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    margin-right: 50px;
+    
+}
+
+.infokop{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    margin-left: 100px;
+}
+
+.titel{
+    padding: 50px;
+    margin-left: 200px;
+}
+
+.slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.slide{
+    margin-top: 20px;
+}
+
+.slide img{
+    object-fit: cover; /* Zorgt ervoor dat de afbeelding niet uitgerekt wordt */
+    clip-path: polygon(20% 0, 100% 0, 80% 100%, 0 100%); 
+}
+
+.logo{
+    position: fixed; /* Zorgt ervoor dat het logo op een vaste plek blijft */
+    top: 10px; /* Afstand van de bovenkant */
+    left: 10px; /* Afstand van de linkerkant */
+    margin: 0; /* Verwijder eventuele marge */
+}
+
+@keyframes flicker {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    20% { opacity: 0; }
+    30% { opacity: 1; }
+    40% { opacity: 0; }
+    70% { opacity: 1; }
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.flicker {
+    animation: flicker 0.7s infinite; /* Sneller knipperen */
+}
+
+.hidden {
+    display: none; /* Verberg het logo en de startlichten */
+}
+
+.fade-out {
+    animation: fadeOut 4s forwards; /* Mooie animatie voor het verdwijnen */
+}
+
+.autosleutel {
+    position: fixed; /* Zorgt ervoor dat de sleutel op een vaste plek blijft */
+    top: 1px; /* Afstand van de bovenkant */
+    left: 1000px; /* Afstand van de linkerkant */
+    cursor: grab;
+}
+
+.sleutelgat {
+    position: relative;
+    top: -200px; /* Afstand van de bovenkant */
+    left: 250px; /* Afstand van de linkerkant */
+    width: 50px;
+}
+
+.black-background {
+    background-color: black;
+    height: 100vh; 
+    width: 100%;
+    position: relative;
+    z-index: 0;
+}
+
+.startlichten {
+    position: fixed; /* Zorgt ervoor dat de startlichten op een vaste plek blijven */
+    left: 50%; /* Plaats de startlichten in het midden van het scherm */
+    transform: translateX(-50%); /* Centreer de startlichten horizontaal */
+    top: -100px; /* Afstand van de bovenkant */
+    transition: top 1s; /* Voeg een overgang toe voor de animatie */
+    z-index: 1; 
+}
+
+.slidedown {
+    animation: slideDown 1s forwards; /* Voeg de animatie toe */
+}
+
+@keyframes slideDown {
+    from {
+        top: -100px;
+    }
+    to {
+        top: 0;
+    }
+}
+
+.slide-down {
+    animation: slideDown 1s forwards;
+}
+
+@keyframes moveCar {
+    from {
+        right: -100px;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+.f1auto {
+    position: fixed; /* Zorgt ervoor dat de auto op een vaste plek blijft */
+    top: 56%; /* Plaats de auto in het midden van het scherm */
+    left: -400px; /* Begin buiten het scherm aan de rechterkant */
+    transform: translateY(-50%); /* Centreer de auto verticaal */
+    z-index: 1;
+}
+
+.moveCar {
+    animation: moveCar 3s linear forwards; /* Laat de auto van rechts naar links bewegen */
+}
+
+@keyframes moveDog {
+    from {
+        left: -200px;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes bobbing {
+    0%, 100% {
+        transform: translateY(-50%);
+    }
+    50% {
+        transform: translateY(-35%);
+    }
+}
+
+.hond  {
+    position: fixed; /* Zorgt ervoor dat de auto op een vaste plek blijft */
+    top: 40%; /* Plaats de auto in het midden van het scherm */
+    left: -200px; /* Begin buiten het scherm aan de linkerkant */
+    transform: translateY(-50%); /* Centreer de auto verticaal */
+    z-index: 1;
+}
+
+.move-dog {
+    animation-delay: 5; /* Voeg een vertraging toe om de herhaling elke 10 seconden te maken */
+    animation: moveDog 10s linear infinite, bobbing 0.5s ease-in-out infinite; /* Laat de hond van links naar rechts bewegen en voeg een bobbing animatie toe */
+}
+
