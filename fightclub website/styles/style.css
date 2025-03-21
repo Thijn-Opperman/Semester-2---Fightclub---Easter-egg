@@ -8,6 +8,7 @@ body{
     background-color: black;
     height: 3000px;
     max-width: 1600px;
+    overflow: visible;
     
 }
 
@@ -127,16 +128,18 @@ p{
 
 .autosleutel {
     position: fixed; /* Zorgt ervoor dat de sleutel op een vaste plek blijft */
-    top: 1px; /* Afstand van de bovenkant */
-    left: 1000px; /* Afstand van de linkerkant */
+    top: 10px; /* Afstand van de bovenkant */
+    right: 10px; /* Afstand van de linkerkant */
     cursor: grab;
 }
 
 .sleutelgat {
-    position: relative;
-    top: -200px; /* Afstand van de bovenkant */
-    left: 250px; /* Afstand van de linkerkant */
-    width: 50px;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 50px; 
+    height: 50px; 
+    z-index: 1000; 
 }
 
 .black-background {
@@ -223,5 +226,44 @@ p{
 .move-dog {
     animation-delay: 5; /* Voeg een vertraging toe om de herhaling elke 10 seconden te maken */
     animation: moveDog 10s linear infinite, bobbing 0.5s ease-in-out infinite; /* Laat de hond van links naar rechts bewegen en voeg een bobbing animatie toe */
+}
+#boostContainer {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 100px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#boostCan {
+    width: 100%;
+    height: auto;
+}
+
+@keyframes energyWave {
+    0% {
+        filter: brightness(1);
+        transform: scale(1);
+        background: linear-gradient(90deg, #FF0219, #E0E0E0, #BB0219, #000000, #232323, #FFFFFF, #b60e0e);
+        background-size: 300% 300%;
+    }
+    50% {
+        filter: brightness(1.5);
+        transform: scale(1.05);
+        background-position: 100% 50%;
+    }
+    100% {
+        filter: brightness(1);
+        transform: scale(1);
+        background-position: 0% 50%;
+    }
+}
+
+.energy-boost {
+    animation: energyWave 1.5s ease-in-out;
+    background: linear-gradient(90deg, #B60E0E, #FFFFFF, #232323, #000000, #BB0219, #E0E0E0, #FF0219);
+    background-size: 300% 300%;
 }
 

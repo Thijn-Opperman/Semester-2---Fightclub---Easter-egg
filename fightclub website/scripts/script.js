@@ -1,5 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     const logo = document.querySelector('.logo');
+    const autosleutel = document.getElementById('autosleutel');
+    const sleutelgat = document.getElementById('sleutelgat');
+    const startlichten = document.getElementById('startlichten');
+    const f1auto = document.querySelector('.f1auto');
+    const hond = document.querySelector('.hond');
+
+    // Toon het logo bij een klik linksboven
     document.body.addEventListener('click', function(event) {
         if (event.clientX < 400 && event.clientY < 250) { // Controleer of de klik linksboven is
             logo.classList.remove('hidden');
@@ -15,16 +22,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Wissel de cursor naar een blikje bij dubbelklik
     document.body.addEventListener('dblclick', function() {
-        document.body.classList.toggle('cursor-blikje'); // Wissel de cursor naar het blikje bij dubbelklik
+        document.body.classList.toggle('cursor-blikje');
     });
 
-    const autosleutel = document.getElementById('autosleutel');
-    const sleutelgat = document.getElementById('sleutelgat');
-    const startlichten = document.getElementById('startlichten');
-    const f1auto = document.querySelector('.f1auto');
-    const hond = document.querySelector('.hond');
-
+    // Logica voor slepen en neerzetten van de sleutel
     autosleutel.addEventListener('dragstart', (e) => {
         e.dataTransfer.setData('text/plain', 'autosleutel');
     });
@@ -43,6 +46,9 @@ document.addEventListener('DOMContentLoaded', function() {
             autosleutel.style.top = "0";
             autosleutel.style.left = "0";
 
+            // Verander het sleutelgat naar een nieuwe afbeelding
+            sleutelgat.querySelector('img').src = "img/Logoslot2.png";
+
             // Toon de startlichten
             startlichten.classList.remove('hidden');
             startlichten.classList.add('slide-down');
@@ -59,9 +65,4 @@ document.addEventListener('DOMContentLoaded', function() {
         hond.classList.add('move-dog');
     }, 10000); // Herhaal elke 10 seconden
 
-    // Voeg een click event listener toe aan de hond
-    hond.addEventListener('click', () => {
-        window.location.href = 'https://www.enorm.com/';
-    });
 });
-

@@ -4,32 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/script EnoRm.js" defer></script>
     <title>Easter eggs</title>
 </head>
 
 <body>
 
     <div class="hidden" class="startlichten">
-        <img id="startlichten" src="/Img/Start lichten.gif" alt="startlichten" width="400px" height="400px">
+        <img id="startlichten" src="img/Start lichten.gif" alt="startlichten" width="400px" height="400px">
     </div>
 
     <div class="f1auto"> 
-        <img id="auto" src="/img/f1.png" alt="f1auto" width="400px" height="200px">
+        <img id="auto" src="img/f1.png" alt="f1auto" width="400px" height="200px">
     </div>
     
     <div class="hond">
-        <img src="/Img/Hond.png" alt="hond" height="100px" width="150px">
+        <img src="img/Hond.png" alt="hond" height="100px" width="150px">
     </div>
 
     <div class="hero">
         <video autoplay loop muted plays-inline class="back-video">
-            <source src="/img/mp4.mp4" type="video/mp4">
+            <source src="img/mp4.mp4" type="video/mp4">
         </video>
     </div>
 
     <div class="logo hidden">
-        <img src="/Img/EnoRm.png" alt="logo" width="250px" height="100px">
+        <img src="img/EnoRm.png" alt="logo" width="250px" height="100px">
     </div>
 
     <div class="container">
@@ -54,36 +56,38 @@
     </div>
 
     <div class="autosleutel" draggable="true" ondragstart="drag(event)">
-        <img id="autosleutel" src="/Img/Autosleutel.png" alt="Autosleutel" width="150px" height="100px">
+        <img id="autosleutel" src="img/Autosleutel.png" alt="Autosleutel" width="50px" height="auto">
     </div>
     
     <div class="sleutelgat" ondrop="drop(event)" ondragover="allowDrop(event)">
-        <img id="sleutelgat" src="/Img/Sleutelgat.png" alt="Sleutelgat" width="150px" height="150px">
+        <img id="sleutelgat" src="img/Logoslot 1.png" alt="Sleutelgat" width="200px" height="auto">
     </div>
 
     <div class="black-background">
         <main>
             <div class="slider">
                 <div class="slide">
-                    <img src="/Img/Delta.png" alt="slideimg" width="300px" height="500px">
+                    <img src="img/Delta.png" alt="slideimg" width="300px" height="500px">
                 </div>
 
                 <div class="slide">
-                    <img src="/img/dpd.jpg" alt="slideimg" width="300px" height="500px">
+                    <img src="img/dpd.jpg" alt="slideimg" width="300px" height="500px">
                 </div>
 
                 <div class="slide">
-                    <img src="/img/Hulphond.jpg" alt="slideimg" width="300px" height="500px">
+                    <img src="img/Hulphond.jpg" alt="slideimg" width="300px" height="500px">
                 </div>
 
                 <div class="slide">
-                    <img src="/img/MORA_header.png" alt="slideimg" width="300px" height="500px">
+                    <img src="img/MORA_header.png" alt="slideimg" width="300px" height="500px">
                 </div>
             </div>
         </main>
     </div>
-
-    <script src="script.js"></script>
+    <div id="boostContainer">
+        <img id="boostCan" src="img/Blikje.png" alt="Boost Blikje">
+        <audio id="boostSound" src="img/Blik sound.mp3"></audio>
+    </div>
 </body>
 
 </html>
