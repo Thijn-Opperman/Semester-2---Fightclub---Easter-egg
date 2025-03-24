@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     allText.forEach(text => text.classList.remove('text-shake'));
 
                     // Navigeer direct naar de nieuwe pagina
-                    window.location.href = "./enorm/index.html";
+                    window.location.href = "./pages/enorm/index.html";
                 }, 1500);
             }, { once: true }); // Zorg ervoor dat de eventlistener slechts één keer wordt uitgevoerd
         } else {
