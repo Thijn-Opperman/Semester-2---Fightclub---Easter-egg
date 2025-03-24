@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fightclub</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/blikkenspel.js" defer></script>
+    <script src="scripts/logoglitch.js" defer></script>
+    <script src="scripts/f1auto.js" defer></script>
+    <script src="scripts/boost.js" defer></script>
+    <script src="scripts/hond.js" defer></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="blikcontainer">
+            <img src="img/Enorm Blik.png" alt="blikje" id="blikje">
+        </div>
+
+        <div id="counter">0</div>
+    </div>
+
+    <div class="logo hidden">
+        <img src="img/EnoRm 1.png" alt="logo" width="260px" height="100px">
+    </div>
+
+    <div class="autosleutel" draggable="true" ondragstart="drag(event)">
+        <img id="autosleutel" src="img/autosleutel 1.png" alt="Autosleutel" width="50px" height="auto">
+    </div>
+
+    <div class="sleutelgat" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img id="sleutelgat" src="img/Logoslot 1.png" alt="Sleutelgat" width="250px" height="auto">
+    </div>
+
+    <div class="f1auto">
+        <img id="auto" src="img/f1 1.png" alt="f1auto" width="400px" height="200px">
+    </div>
+    <div id="boostContainer">
+        <img id="boostCan" src="img/Blikje.png" alt="Boost Blikje">
+        <audio id="boostSound" src="img/Blik sound.mp3"></audio>
+    </div>
+
+    <div class="hond">
+        <img src="/img/Hond 1.png" alt="hond" height="100px" width="150px">
+    </div>
+</body>
+
+</html>
