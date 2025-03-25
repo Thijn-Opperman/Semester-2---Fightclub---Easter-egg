@@ -1,8 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    overflow-y: scroll;
-    background-image: url(../img/Fightclub\ bg.png);
+    overflow-y: scroll; 
+    background-image: url('../img/fightclub_background.png');
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 1150vh;
