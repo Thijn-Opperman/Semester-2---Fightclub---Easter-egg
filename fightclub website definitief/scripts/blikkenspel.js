@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const blikje = document.getElementById("blikje");
     const container = document.getElementById("blikcontainer");
     const counterDisplay = document.getElementById("counter");
@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const tekstContainer = document.querySelector('.container');
     let counter = 0;
     let scriptActivated = false;
+
+    counterDisplay.textContent = ""; // Verberg de score
 
     function getRandomPosition() {
         const containerRect = container.getBoundingClientRect();
@@ -32,34 +34,36 @@ document.addEventListener("DOMContentLoaded", function() {
     function activateScript() {
         if (!scriptActivated) {
             scriptActivated = true;
-            blikje.addEventListener("click", function() {
+            blikje.addEventListener("click", function () {
                 counter++;
-                counterDisplay.textContent = `${counter}`;
+                counterDisplay.textContent = `${counter}/10`; // Toon de score als 0/10, 1/10, etc.
                 if (counter >= 10) {
                     startShaking();
-                    setTimeout(function() {
+                    setTimeout(function () {
                         stopShaking(); // Stop het shaken na 2 seconden
                     }, 2000);
-                    setTimeout(function() {
+                    setTimeout(function () {
                         blikje.style.display = "none";
-                    }, 3000); // Verdwijn na 3 seconde
-
+                        
+                        // Verwijs naar de Enorm-pagina
+                        window.location.href = "./pages/enorm/index.html";
+                    }, 3000); // Verwijder het blikje en navigeer na 3 seconden
+    
                     // Voeg de animatie toe aan het logo en de tekstcontainer
                     logo.classList.add('slide-down-out');
                     tekstContainer.classList.add('slide-down-out');
                 }
             });
-
+    
             setInterval(moveBlikje, 900); // Verplaats het blikje elke 0.9 seconde
         }
     }
-
-    // Voeg een event listener toe om te wachten op een klik op het blikje rechtsonderin
-    blikje.addEventListener("click", function(event) {
-        const rect = blikje.getBoundingClientRect();
-        const isClickedInBottomRight = (event.clientX >= rect.right - blikje.clientWidth && event.clientY >= rect.bottom - blikje.clientHeight);
-        if (isClickedInBottomRight) {
-            activateScript();
+    // Voeg een event listener toe om te wachten op een klik op het blikje
+    blikje.addEventListener("click", function (event) {
+        if (!scriptActivated) {
+            // Toon een pop-up met uitleg
+            alert("Welkom bij het spel! Klik op het blikje om punten te scoren. Je moet 10 punten halen om te winnen!");
         }
+        activateScript(); // Start het spel
     });
 });

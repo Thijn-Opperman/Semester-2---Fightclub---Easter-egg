@@ -267,3 +267,4 @@ body {
   animation-delay: 5; /* Voeg een vertraging toe om de herhaling elke 10 seconden te maken */
   animation: moveDog 10s linear infinite, bobbing 0.5s ease-in-out infinite; /* Laat de hond van links naar rechts bewegen en voeg een bobbing animatie toe */
 }
+
