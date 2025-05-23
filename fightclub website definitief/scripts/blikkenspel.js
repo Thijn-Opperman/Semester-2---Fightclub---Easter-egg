@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
     
-            setInterval(moveBlikje, 900); // Verplaats het blikje elke 0.9 seconde
+            setInterval(moveBlikje, 1500); // Verplaats het blikje elke 0.9 seconde
         }
     }
     // Voeg een event listener toe om te wachten op een klik op het blikje

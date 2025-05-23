@@ -96,6 +96,7 @@ p{
     top: 10px; /* Afstand van de bovenkant */
     left: 10px; /* Afstand van de linkerkant */
     margin: 0; /* Verwijder eventuele marge */
+    z-index: 2000;
 }
 
 @keyframes flicker {
@@ -266,4 +267,3 @@ p{
     background: linear-gradient(90deg, #B60E0E, #FFFFFF, #232323, #000000, #BB0219, #E0E0E0, #FF0219);
     background-size: 300% 300%;
 }
-
